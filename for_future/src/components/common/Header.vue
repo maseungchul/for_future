@@ -1,12 +1,5 @@
 <template>
-  <header></header>
+  <v-toolbar title="for Future">
+    <router-link to="/login"></router-link>
+  </v-toolbar>
 </template>
-
-<script setup>
-
-import { ref } from 'vue'
-
-const variable = ref('')
-const func = () => {}
-
-</script>
