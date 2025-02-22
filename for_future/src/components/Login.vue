@@ -2,7 +2,7 @@
   <v-card
     class="mx-auto"
     max-width="344"
-    title="LOGIN"
+    title="LOG IN"
   >
     <v-container>
       <v-text-field
