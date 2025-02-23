@@ -17,7 +17,14 @@
           label="User ID"
           variant="underlined"
           :rules="rules.userId"
-        ></v-text-field>
+        >
+          <template #append-inner>
+            <v-btn
+              variant="text"
+              size="small"
+            >CHECK</v-btn>
+          </template>
+        </v-text-field>
         <v-text-field
           v-model="password"
           label="Password"
