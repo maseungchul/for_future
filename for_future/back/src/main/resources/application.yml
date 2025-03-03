@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: for_future
+
+server:
+  port: 9000
+

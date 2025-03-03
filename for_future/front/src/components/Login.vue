@@ -22,7 +22,10 @@
     <v-divider></v-divider>
     <v-card-actions>
       <v-spacer></v-spacer>
-      <v-btn color="success">
+      <v-btn
+        color="success"
+        @click="login()"
+      >
         LOGIN <v-icon icon="mdi-chevron-right" end></v-icon>
       </v-btn>
     </v-card-actions>
@@ -36,6 +39,20 @@ import { ref } from 'vue'
 const visible = ref(false)
 const userId = ref('')
 const password = ref('')
-const func = () => {}
+
+function login() {
+  const params = {
+    userId: userId.value,
+    password: password.value
+  }
+
+  this.$axios.post(`${process.env.VUE_APP_USER_API}/login`, params)
+    .then(res => {
+      alert(res)
+    })
+    .catch(err => {
+      alert(err)
+    })
+}
 
 </script>
